@@ -1,6 +1,5 @@
 # sudo
 sudo apt-get install clang gcc git python ruby zsh tree
-
 # prezto: http://wikimatze.de/better-zsh-with-prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 setopt EXTENDED_GLOB
@@ -38,12 +37,12 @@ make distclean
             --enable-perlinterp \
             --enable-luainterp \
             --with-luajit \
-	    --enable-gui=auto \
+	        --enable-gui=auto \
             --enable-fail-if-missing \
             --with-lua-prefix=/usr/include/lua5.1 \
             --enable-cscope 
 make 
-sudo make installn
+sudo make install
 
 # http://vim.spf13.com/#vimrc
 curl http://j.mp/spf13-vim3 -L -o - | sh
