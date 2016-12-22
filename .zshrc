@@ -16,7 +16,7 @@ setopt appendhistory autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/Jon/.zshrc'
+zstyle :compinstall filename '/home/ubuntu/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -30,6 +30,5 @@ alias valcheck='valgrind --leak-check=yes --track-origins=yes'
 
 vim()(command vim "$@" && [[ "$@" = *'.c'* || "$@" = *'.h'* || "$@" = Makefile ]] && make)
 gitup()( git add . && git commit -m "$*" && gp )
-claclab()( git clone jre2134@clac.cs.columbia.edu:~/cs3157/lab$* )
 
 export LC_ALL="en_US.UTF-8"
