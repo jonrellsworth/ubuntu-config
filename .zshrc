@@ -25,10 +25,13 @@ compinit
 # User specific aliases and functions
 alias ll="ls -alhF"
 alias cunix="ssh -Y jre2134@cunix.cc.columbia.edu"
-alias speedtest='speedtest-cli'
 alias valcheck='valgrind --leak-check=yes --track-origins=yes'
 
 vim()(command vim "$@" && [[ "$@" = *'.c'* || "$@" = *'.h'* || "$@" = Makefile ]] && make)
 gitup()( git add . && git commit -m "$*" && gp )
 
 export LC_ALL="en_US.UTF-8"
+
+# setopts
+setopt clobber
+setopt append_create
