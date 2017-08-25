@@ -26,6 +26,7 @@ compinit
 alias ll="ls -alhF"
 alias cunix="ssh -Y jre2134@cunix.cc.columbia.edu"
 alias valcheck='valgrind --leak-check=yes --track-origins=yes'
+unalias rm
 
 vim()(command vim "$@" && [[ "$@" = *'.c'* || "$@" = *'.h'* || "$@" = Makefile ]] && make)
 gitup()( git add . && git commit -m "$*" && gp )
